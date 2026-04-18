@@ -3,6 +3,7 @@ import 'package:introduction_screen/introduction_screen.dart';
 import 'package:quran_app/utils/AppColor.dart';
 import 'package:quran_app/utils/AppRouts.dart';
 import 'package:quran_app/utils/AppStyles.dart';
+import 'package:quran_app/utils/AssetsApp.dart';
 
 class IntroScreen extends StatelessWidget {
   IntroScreen({super.key});
@@ -19,7 +20,7 @@ class IntroScreen extends StatelessWidget {
         ),
         textAlign: TextAlign.center,
       ),
-      image: Image.asset('assets/introsdaction/Intro 1.png', fit: BoxFit.cover),
+      image: Image.asset(AssetsApp.intro1, fit: BoxFit.cover),
     ),
     PageViewModel(
       titleWidget: Text('Welcome To Islmi App', style: AppStyles.bold24primary),
@@ -28,7 +29,7 @@ class IntroScreen extends StatelessWidget {
         style: AppStyles.bold24primary,
         textAlign: TextAlign.center,
       ),
-      image: Image.asset('assets/introsdaction/Intro 2.png', fit: BoxFit.cover),
+      image: Image.asset(AssetsApp.intro2, fit: BoxFit.cover),
     ),
     PageViewModel(
       titleWidget: Text('Reading the Quran', style: AppStyles.bold24primary),
@@ -37,7 +38,7 @@ class IntroScreen extends StatelessWidget {
         style: AppStyles.bold24primary,
         textAlign: TextAlign.center,
       ),
-      image: Image.asset('assets/introsdaction/Intro 3.png', fit: BoxFit.cover),
+      image: Image.asset(AssetsApp.intro3, fit: BoxFit.cover),
     ),
     PageViewModel(
       titleWidget: Text('Bearish', style: AppStyles.bold24primary),
@@ -46,7 +47,7 @@ class IntroScreen extends StatelessWidget {
         style: AppStyles.bold24primary,
         textAlign: TextAlign.center,
       ),
-      image: Image.asset('assets/introsdaction/Intro 4.png', fit: BoxFit.cover),
+      image: Image.asset(AssetsApp.intro4, fit: BoxFit.cover),
     ),
     PageViewModel(
       titleWidget: Text('Holy Quran Radio', style: AppStyles.bold24primary),
@@ -55,7 +56,7 @@ class IntroScreen extends StatelessWidget {
         style: AppStyles.bold24primary,
         textAlign: TextAlign.center,
       ),
-      image: Image.asset('assets/introsdaction/Intro 5.png', fit: BoxFit.cover),
+      image: Image.asset(AssetsApp.intro5, fit: BoxFit.cover),
     ),
   ];
 

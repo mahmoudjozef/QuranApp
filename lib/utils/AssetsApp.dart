@@ -20,4 +20,10 @@ class AssetsApp {
   static const String icon_sebha='assets/icons/ic_sebha.png';
   static const String icon_time='assets/icons/ic_time.png';
 //______________________________________________________
+  static const String mostRecent='assets/images/img_most_recent.png';
+  static const String MaskSuoraLift='assets/images/Mask Suora Lift.png';
+  static const String MaskSuoraRight='assets/images/Mask Suora Right.png';
+//______________________________________________________
+
+
 }
