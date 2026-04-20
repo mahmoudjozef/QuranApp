@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:quran_app/Screens/homeScreen/Widets/TextFiled.dart';
-import 'package:quran_app/Screens/homeScreen/taps/HadithTap.dart';
+import 'package:quran_app/Screens/homeScreen/taps/HadithTap/HadithTap.dart';
 import 'package:quran_app/Screens/homeScreen/taps/QuranTap/QuranTap.dart';
 import 'package:quran_app/Screens/homeScreen/taps/RadioTap.dart';
 import 'package:quran_app/Screens/homeScreen/taps/SebhaTap.dart';

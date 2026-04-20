@@ -56,18 +56,20 @@ class _SouraDetailsScreenState extends State<SouraDetailsScreen> {
                 : ListView.separated(
                     itemCount: verses.length,
                     itemBuilder: (context, index) {
-                      return  Container(
-                        width: double.infinity,
-                        alignment: Alignment.center,
-                        child: Text(
-
-                          ' (${index+1}) ${verses[index]}',
-                          textAlign: TextAlign.center,
-                          style: AppStyles.bold20white.copyWith(
-                            color: AppColor.primary,
+                      return  Padding(
+                        padding: const EdgeInsets.all(10),
+                        child: Container(
+                          width: double.infinity,
+                          alignment: Alignment.center,
+                          child: Text(
+                            ' (${index+1}) ${verses[index]}',
+                            textAlign: TextAlign.center,
+                            style: AppStyles.bold20white.copyWith(
+                              color: AppColor.primary,
+                            ),
                           ),
                         ),
-                      );;
+                      );
                     },
               separatorBuilder: (context, index) => SizedBox(height: 10,),
                   ),
@@ -76,7 +78,6 @@ class _SouraDetailsScreenState extends State<SouraDetailsScreen> {
       ),
     );
   }
-
   void lodeSouraFile(int index) async {
     String Contant = await rootBundle.loadString(
       'assets/Files/Suras/${index + 1}.txt',

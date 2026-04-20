@@ -7,6 +7,7 @@ class AssetsApp {
   static const String radioBackground='assets/tapsBackGround/radioBackground.png';
   static const String sebhaBackground='assets/tapsBackGround/sebhaBackground.png';
   static const String timeBackground='assets/tapsBackGround/timeBackground.png';
+  static const String hadithCardBackGroundItem='assets/tapsBackGround/HadithCardBackGroundItem.png';
   //______________________________________________________
   static const String intro1='assets/introsdaction/Intro 1.png';
   static const String intro2='assets/introsdaction/Intro 2.png';
@@ -24,6 +25,8 @@ class AssetsApp {
   static const String MaskSuoraLift='assets/images/Mask Suora Lift.png';
   static const String MaskSuoraRight='assets/images/Mask Suora Right.png';
 //______________________________________________________
-
+  static const String leftCorner='assets/images/left_corner.png';
+  static const String rightCorner='assets/images/right_corner.png';
+  static const String Mosque='assets/images/Mosque-.png';
 
 }
