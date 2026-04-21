@@ -1,10 +1,27 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:quran_app/Screens/homeScreen/taps/HadithTap/models/HadithRes.dart';
 import 'package:quran_app/utils/AppColor.dart';
 import 'package:quran_app/utils/AppStyles.dart';
 import 'package:quran_app/utils/AssetsApp.dart';
 
-class CarouselSliderUi extends StatelessWidget {
-  const CarouselSliderUi({super.key});
+class CarouselSliderUi extends StatefulWidget {
+  const CarouselSliderUi({super.key, required this.index});
+
+  final int index;
+
+  @override
+  State<CarouselSliderUi> createState() => _CarouselSliderUiState();
+}
+
+class _CarouselSliderUiState extends State<CarouselSliderUi> {
+  HadithRes? Hadith;
+
+  @override
+  void initState() {
+    super.initState(); // مهم جدًا
+    lodeHadithFile(widget.index);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -26,15 +43,37 @@ class CarouselSliderUi extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 Expanded(child: Image.asset(AssetsApp.leftCorner)),
-                Text('الحديث لاول', style: AppStyles.bold24black),
+                SizedBox(height: 15),
+                Text(
+                  Hadith?.title ?? '',
+                  style: AppStyles.bold24black.copyWith(fontSize: 15),
+                ),
                 Expanded(child: Image.asset(AssetsApp.rightCorner)),
               ],
             ),
-            Expanded(child: ListView.builder(itemBuilder:(context, index) => Container(),)),
-            Image.asset(AssetsApp.Mosque)
+            Expanded(
+              child: SingleChildScrollView(
+                child: Text(
+                  Hadith?.content ?? '',
+                  style: AppStyles.bold24black.copyWith(fontSize: 20),
+                  textAlign: TextAlign.center,
+                ),
+              ),
+            ),
+            Image.asset(AssetsApp.Mosque),
           ],
         ),
       ),
     );
+  }
+
+  void lodeHadithFile(int index) async {
+    String Files = await rootBundle.loadString(
+      'assets/Files/Hadeeth/h${index + 1}.txt',
+    );
+    String title = Files.substring(0, Files.indexOf('\n'));
+    String content = Files.substring(Files.indexOf('\n'));
+    Hadith = HadithRes(content: content, title: title);
+    setState(() {});
   }
 }
