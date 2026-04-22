@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:quran_app/Screens/homeScreen/Widets/TextFiled.dart';
 import 'package:quran_app/Screens/homeScreen/taps/HadithTap/HadithTap.dart';
 import 'package:quran_app/Screens/homeScreen/taps/QuranTap/QuranTap.dart';
-import 'package:quran_app/Screens/homeScreen/taps/RadioTap.dart';
-import 'package:quran_app/Screens/homeScreen/taps/SebhaTap.dart';
-import 'package:quran_app/Screens/homeScreen/taps/TimeTap.dart';
+import 'package:quran_app/Screens/homeScreen/taps/RadioTap/RadioTap.dart';
+import 'package:quran_app/Screens/homeScreen/taps/SebhaTap/SebhaTap.dart';
+import 'package:quran_app/Screens/homeScreen/taps/TimeTap/TimeTap.dart';
 import 'package:quran_app/utils/AppColor.dart';
 import 'package:quran_app/utils/AssetsApp.dart';
 

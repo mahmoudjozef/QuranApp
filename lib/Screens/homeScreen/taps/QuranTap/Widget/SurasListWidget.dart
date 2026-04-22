@@ -12,7 +12,7 @@ class SurasListWidget extends StatelessWidget {
     return ListView.separated(
       itemBuilder: (context, index) {
         return InkWell(
-          onTap: () => Navigator.pushNamed(context, AppRouts.homeDetailsRouteNamed,arguments: index),
+          onTap: () => Navigator.pushNamed(context, AppRouts.quranDetailsRouteNamed,arguments: index),
           child: Row(
             spacing: 15,
             children: [

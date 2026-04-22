@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:quran_app/Screens/IntroScreen/IntroScreen.dart';
 import 'package:quran_app/Screens/SplashScreen/SplashScreen.dart';
 import 'package:quran_app/Screens/homeScreen/homeScreen.dart';
+import 'package:quran_app/Screens/homeScreen/taps/HadithTap/Details/hadithDetailsScreen.dart';
 import 'package:quran_app/Screens/homeScreen/taps/QuranTap/Details/souraDetailsScreen.dart';
 import 'package:quran_app/utils/AppRouts.dart';
 
-void main() {
+void main()
+{
   runApp(const MyApp());
 }
 
@@ -21,7 +23,8 @@ class MyApp extends StatelessWidget {
         AppRouts.splashRouteNamed: (context) =>  Splashscreen(),
         AppRouts.introRouteNamed: (context) =>  IntroScreen(),
         AppRouts.homeRouteNamed: (context) =>  Homescreen(),
-        AppRouts.homeDetailsRouteNamed: (context) => SouraDetailsScreen(),
+        AppRouts.quranDetailsRouteNamed: (context) => SouraDetailsScreen(),
+        AppRouts.hadithDetailsRouteNamed: (context) => Hadithdetailsscreen(),
       },
     );
   }
