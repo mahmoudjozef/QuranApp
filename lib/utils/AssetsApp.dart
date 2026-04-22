@@ -28,5 +28,9 @@ class AssetsApp {
   static const String leftCorner='assets/images/left_corner.png';
   static const String rightCorner='assets/images/right_corner.png';
   static const String Mosque='assets/images/Mosque-.png';
+//______________________________________________________
+  static const String SebhaBody1='assets/images/SebhaBody 1.png';
+  static const String SebhaBody2='assets/images/Group 37.png';
+  static const String textSebhaBody='assets/images/سَبِّحِ اسْمَ رَبِّكَ الأعلى.png';
 
 }
