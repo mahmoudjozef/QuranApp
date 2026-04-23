@@ -5,7 +5,8 @@ import 'package:quran_app/utils/AppStyles.dart';
 import 'package:quran_app/utils/AssetsApp.dart';
 
 class MostRecentlyItem extends StatelessWidget {
-  MostRecentlyItem({super.key});
+List<int> filterList;
+  MostRecentlyItem({super.key,required this.filterList});
 
   final QuranRes res = QuranRes();
 
@@ -13,7 +14,7 @@ class MostRecentlyItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView.separated(
       scrollDirection: Axis.horizontal,
-      itemCount: 5,
+      itemCount: filterList.length,
       itemBuilder: (context, index) {
         return Container(
           width: 250,

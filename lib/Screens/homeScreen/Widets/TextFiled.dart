@@ -4,9 +4,12 @@ import 'package:quran_app/utils/AppStyles.dart';
 import 'package:quran_app/utils/AssetsApp.dart';
 
 class CustomTextField extends StatelessWidget {
+  Function(String) onChanged;
+  CustomTextField({required this.onChanged});
   @override
   Widget build(BuildContext context) {
     return TextField(
+      onChanged:onChanged ,
       style: AppStyles.bold24primary.copyWith(color: AppColor.whiteColor),
       decoration: InputDecoration(
         hintText: 'Sura Name',
@@ -22,4 +25,5 @@ class CustomTextField extends StatelessWidget {
     borderRadius: BorderRadius.circular(20),
     borderSide: BorderSide(color: AppColor.primary),
   );
+
 }
