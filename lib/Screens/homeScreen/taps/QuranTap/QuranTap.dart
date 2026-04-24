@@ -3,6 +3,7 @@ import 'package:quran_app/Screens/homeScreen/Widets/TextFiled.dart';
 import 'package:quran_app/Screens/homeScreen/taps/QuranTap/Widget/MostRecentlyItem.dart';
 import 'package:quran_app/Screens/homeScreen/taps/QuranTap/Widget/SurasListWidget.dart';
 import 'package:quran_app/Screens/homeScreen/taps/QuranTap/model/QuranRes.dart';
+import 'package:quran_app/Screens/homeScreen/taps/QuranTap/model/shared_preferences.dart' show getListSura;
 import 'package:quran_app/utils/AppStyles.dart';
 
 class QuranTap extends StatefulWidget {
@@ -14,7 +15,17 @@ class QuranTap extends StatefulWidget {
 
 class _QuranTapState extends State<QuranTap> {
   List<int> filterList = List.generate(114, (index) => index);
+  List<int> mostRecentList = [];
+  @override
+  void initState() {
+    super.initState();
+    loadRecent();
+  }
 
+  void loadRecent() async {
+    mostRecentList = await getListSura();
+    setState(() {});
+  }
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -31,7 +42,7 @@ class _QuranTapState extends State<QuranTap> {
           SizedBox(height: 10),
           SizedBox(
             height: 150,
-            child: MostRecentlyItem(filterList: filterList),
+            child: MostRecentlyItem(filterList: mostRecentList),
           ),
           Text('Suras List', style: AppStyles.bold16white),
           Expanded(child: filterList.isEmpty

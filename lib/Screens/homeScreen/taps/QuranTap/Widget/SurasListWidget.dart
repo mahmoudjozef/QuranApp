@@ -1,12 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:quran_app/Screens/homeScreen/taps/QuranTap/model/QuranRes.dart';
+import 'package:quran_app/Screens/homeScreen/taps/QuranTap/model/shared_preferences.dart';
 import 'package:quran_app/utils/AppRouts.dart';
 import 'package:quran_app/utils/AppStyles.dart';
 
-class SurasListWidget extends StatelessWidget {
+class SurasListWidget extends StatefulWidget {
   List<int> filterList;
   SurasListWidget({required this.filterList});
+
+  @override
+  State<SurasListWidget> createState() => _SurasListWidgetState();
+}
+
+class _SurasListWidgetState extends State<SurasListWidget> {
   int index = 0;
+
   QuranRes res = QuranRes();
 
   @override
@@ -14,10 +22,13 @@ class SurasListWidget extends StatelessWidget {
 
     return ListView.separated(
       itemBuilder: (context, index) {
-        int realIndex = filterList[index];
-
+        int realIndex = widget.filterList[index];
         return InkWell(
           onTap: () {
+            saveListSura(realIndex);
+            setState(() {
+
+            });
             Navigator.pushNamed(
               context,
               AppRouts.quranDetailsRouteNamed,
@@ -53,7 +64,7 @@ class SurasListWidget extends StatelessWidget {
         );
       },
       separatorBuilder: (context, index) => SizedBox(height: 15),
-      itemCount:filterList.length,
+      itemCount:widget.filterList.length,
     );
   }
 }

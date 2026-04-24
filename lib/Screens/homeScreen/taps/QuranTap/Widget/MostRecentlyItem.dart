@@ -16,6 +16,7 @@ List<int> filterList;
       scrollDirection: Axis.horizontal,
       itemCount: filterList.length,
       itemBuilder: (context, index) {
+        int realIndex = filterList[index];
         return Container(
           width: 250,
           padding: const EdgeInsets.all(10),
@@ -30,9 +31,9 @@ List<int> filterList;
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(QuranRes.englishQuranSurahs[index],style: AppStyles.bold24black,),
-                    Text(QuranRes.arabicAuranSuras[index],style: AppStyles.bold24black,),
-                    Text("${QuranRes.verses[index]} Verses",style: AppStyles.bold16black,),
+                    Text(QuranRes.englishQuranSurahs[realIndex],style: AppStyles.bold24black,),
+                    Text(QuranRes.arabicAuranSuras[realIndex],style: AppStyles.bold24black,),
+                    Text("${QuranRes.verses[realIndex]} Verses",style: AppStyles.bold16black,),
                   ],
                 ),
                 Expanded(
