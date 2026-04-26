@@ -15,18 +15,6 @@ class QuranTap extends StatefulWidget {
 
 class _QuranTapState extends State<QuranTap> {
   List<int> filterList = List.generate(114, (index) => index);
-  List<int> mostRecentList = [];
-  @override
-  void initState() {
-    super.initState();
-    loadRecent();
-  }
-
-  void loadRecent() async {
-    mostRecentList = await getListSura();
-    setState(() {});
-  }
-  @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 10),
@@ -40,10 +28,8 @@ class _QuranTapState extends State<QuranTap> {
             },
           ),
           SizedBox(height: 10),
-          SizedBox(
-            height: 150,
-            child: MostRecentlyItem(filterList: mostRecentList),
-          ),
+          //MostRecentlyItem
+          MostRecentlyItem(),
           Text('Suras List', style: AppStyles.bold16white),
           Expanded(child: filterList.isEmpty
               ? Center(
