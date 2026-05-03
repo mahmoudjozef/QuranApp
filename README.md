@@ -11,12 +11,12 @@ A Flutter-based Islamic application that provides users with a complete Quran ex
 
 ## 🚀 Features
 
-- 📖 Full Quran with Surah details  
-- 🕌 Hadith section  
-- 📻 Quran Radio streaming  
-- 🧭 Prayer Times  
-- 📿 Digital Sebha  
-- 🕓 Recently read Surahs  
+📖 Full Quran with Surah details
+🕌 Hadith section with detailed view
+📿 Digital Sebha (Tasbeeh counter)
+🕓 Recently read Surahs (using Shared Preferences)
+🎯 Smooth navigation using Tabs
+🎨 Clean and responsive UI
 
 ---
 
