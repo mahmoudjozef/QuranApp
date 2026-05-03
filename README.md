@@ -44,6 +44,3 @@ A Flutter-based Islamic application that provides users with a complete Quran ex
 
 --------
 
-## 🔗 GitHub Repo
-
-https://github.com/mahmoudjozef/QuranApp
